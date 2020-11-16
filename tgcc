@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -d ~/.tgccTemp ]
+then
+	echo "Temp dir already exists"
+else
+	mkdir ~/.tgccTemp
+fi
+
+gcc $@ -o ~/.tgccTemp/a.out && ~/.tgccTemp/a.out
+rm -rf .tgccTemp
